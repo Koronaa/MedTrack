@@ -20,6 +20,8 @@
 		586CB08927DC568300EA3280 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB08827DC568300EA3280 /* UIColor+Extensions.swift */; };
 		586CB08B27DC572000EA3280 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB08A27DC572000EA3280 /* UIConstants.swift */; };
 		586CB08D27DC57EF00EA3280 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB08C27DC57EF00EA3280 /* UIHelper.swift */; };
+		586CB09227DC6CE200EA3280 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB09027DC6CE200EA3280 /* HistoryTableViewCell.swift */; };
+		586CB09327DC6CE200EA3280 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586CB09127DC6CE200EA3280 /* HistoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		586CB08827DC568300EA3280 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		586CB08A27DC572000EA3280 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		586CB08C27DC57EF00EA3280 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		586CB09027DC6CE200EA3280 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		586CB09127DC6CE200EA3280 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +157,7 @@
 		586CB08227DC557700EA3280 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				586CB05127DC4C7D00EA3280 /* HomeViewController.swift */,
+				586CB08E27DC6CBB00EA3280 /* Home */,
 				586CB08327DC558300EA3280 /* Storyboard */,
 			);
 			path = View;
@@ -193,6 +197,24 @@
 				586CB08A27DC572000EA3280 /* UIConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		586CB08E27DC6CBB00EA3280 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				586CB08F27DC6CCA00EA3280 /* Cell */,
+				586CB05127DC4C7D00EA3280 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		586CB08F27DC6CCA00EA3280 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				586CB09027DC6CE200EA3280 /* HistoryTableViewCell.swift */,
+				586CB09127DC6CE200EA3280 /* HistoryTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +323,7 @@
 			files = (
 				586CB05D27DC4C7E00EA3280 /* LaunchScreen.storyboard in Resources */,
 				586CB05A27DC4C7E00EA3280 /* Assets.xcassets in Resources */,
+				586CB09327DC6CE200EA3280 /* HistoryTableViewCell.xib in Resources */,
 				586CB05527DC4C7D00EA3280 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +351,7 @@
 			files = (
 				586CB05827DC4C7D00EA3280 /* MedTrack.xcdatamodeld in Sources */,
 				586CB08927DC568300EA3280 /* UIColor+Extensions.swift in Sources */,
+				586CB09227DC6CE200EA3280 /* HistoryTableViewCell.swift in Sources */,
 				586CB05227DC4C7D00EA3280 /* HomeViewController.swift in Sources */,
 				586CB04E27DC4C7D00EA3280 /* AppDelegate.swift in Sources */,
 				586CB05027DC4C7D00EA3280 /* SceneDelegate.swift in Sources */,

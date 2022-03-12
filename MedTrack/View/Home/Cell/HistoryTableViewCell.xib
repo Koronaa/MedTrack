@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HistoryTableViewCell" rowHeight="59" id="KGk-i7-Jjw" customClass="HistoryTableViewCell" customModule="MedTrack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="337" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwW-HJ-DFC">
+                        <rect key="frame" x="15" y="5" width="307" height="49"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I6-DG-bgO">
+                                <rect key="frame" x="5" y="5" width="47.666666666666664" height="39"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9th January, 2022 " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udU-xp-YrT">
+                                <rect key="frame" x="199.66666666666666" y="5" width="102.33333333333334" height="17.333333333333332"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="5rk-Db-RGN">
+                                <rect key="frame" x="138" y="27.333333333333336" width="164" height="16.666666666666664"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00 am" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpb-p3-GIF">
+                                        <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="16.666666666666668"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00 pm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phE-Nl-cW5">
+                                        <rect key="frame" x="55.666666666666657" y="0.0" width="52.666666666666657" height="16.666666666666668"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00 pm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuR-uT-W5a">
+                                        <rect key="frame" x="111.33333333333333" y="0.0" width="52.666666666666671" height="16.666666666666668"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Medicine Taken" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9S-3T-1KM" userLabel="No Medicine Taken">
+                                <rect key="frame" x="188.66666666666666" y="27.333333333333336" width="113.33333333333334" height="16.666666666666664"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="udU-xp-YrT" firstAttribute="top" secondItem="fwW-HJ-DFC" secondAttribute="top" constant="5" id="EzB-CQ-1vf"/>
+                            <constraint firstAttribute="trailing" secondItem="udU-xp-YrT" secondAttribute="trailing" constant="5" id="NaG-dD-9Ov"/>
+                            <constraint firstAttribute="bottom" secondItem="7I6-DG-bgO" secondAttribute="bottom" constant="5" id="OFs-Sv-Vk2"/>
+                            <constraint firstAttribute="trailing" secondItem="X9S-3T-1KM" secondAttribute="trailing" constant="5" id="PtB-du-Xf1"/>
+                            <constraint firstItem="7I6-DG-bgO" firstAttribute="centerY" secondItem="fwW-HJ-DFC" secondAttribute="centerY" id="RZr-In-6Ge"/>
+                            <constraint firstAttribute="bottom" secondItem="X9S-3T-1KM" secondAttribute="bottom" constant="5" id="Upq-mm-cPc"/>
+                            <constraint firstAttribute="bottom" secondItem="5rk-Db-RGN" secondAttribute="bottom" constant="5" id="WMU-LB-xqp"/>
+                            <constraint firstItem="X9S-3T-1KM" firstAttribute="top" secondItem="udU-xp-YrT" secondAttribute="bottom" constant="5" id="sAC-V8-ig6"/>
+                            <constraint firstItem="7I6-DG-bgO" firstAttribute="top" secondItem="fwW-HJ-DFC" secondAttribute="top" constant="5" id="v5o-Xx-R6R"/>
+                            <constraint firstAttribute="trailing" secondItem="5rk-Db-RGN" secondAttribute="trailing" constant="5" id="wbI-Mh-scs"/>
+                            <constraint firstItem="7I6-DG-bgO" firstAttribute="leading" secondItem="fwW-HJ-DFC" secondAttribute="leading" constant="5" id="z4m-XV-I1X"/>
+                            <constraint firstItem="5rk-Db-RGN" firstAttribute="top" secondItem="udU-xp-YrT" secondAttribute="bottom" constant="5" id="zAY-e5-r4j"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="fwW-HJ-DFC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="b2l-Vr-m2Y"/>
+                    <constraint firstAttribute="trailing" secondItem="fwW-HJ-DFC" secondAttribute="trailing" constant="15" id="eQC-EB-sTG"/>
+                    <constraint firstAttribute="bottom" secondItem="fwW-HJ-DFC" secondAttribute="bottom" constant="5" id="iAu-KV-HGh"/>
+                    <constraint firstItem="fwW-HJ-DFC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="pc2-76-l7O"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="containerView" destination="fwW-HJ-DFC" id="ay8-3H-dZJ"/>
+                <outlet property="dateLabel" destination="udU-xp-YrT" id="s7C-dc-gXU"/>
+                <outlet property="eveningTimeLabel" destination="phE-Nl-cW5" id="Sqe-G9-XAd"/>
+                <outlet property="morningTimeLabel" destination="Dpb-p3-GIF" id="bOK-Pc-bB4"/>
+                <outlet property="nightTimeLabel" destination="SuR-uT-W5a" id="ysD-G5-bFX"/>
+                <outlet property="noMedicineTakenLabel" destination="X9S-3T-1KM" id="hKB-ND-Kq0"/>
+                <outlet property="scoreLabel" destination="7I6-DG-bgO" id="QBx-sa-ynE"/>
+            </connections>
+            <point key="canvasLocation" x="148.55072463768118" y="157.70089285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

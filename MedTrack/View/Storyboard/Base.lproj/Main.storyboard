@@ -34,8 +34,8 @@ Good Afternoon!</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="iVk-pd-4h5">
                                                 <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="110.66666666666667"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8U-ja-oze">
-                                                        <rect key="frame" x="25.333333333333343" y="0.0" width="89" height="102.66666666666667"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8U-ja-oze">
+                                                        <rect key="frame" x="47.666666666666671" y="0.0" width="44.666666666666671" height="102.66666666666667"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="75"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -87,20 +87,39 @@ Good Afternoon!</string>
                                     <constraint firstItem="4g6-Xp-WKH" firstAttribute="centerX" secondItem="2u1-tQ-hBF" secondAttribute="centerX" id="w2D-ch-94p"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WGm-wB-5aK">
-                                <rect key="frame" x="0.0" y="273" width="428" height="653"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VkS-ah-Phs" userLabel="TableViewHolder">
+                                <rect key="frame" x="0.0" y="265.66666666666669" width="428" height="660.33333333333326"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WGm-wB-5aK">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="660.33333333333337"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No History Info available " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isz-Uf-dT0">
+                                        <rect key="frame" x="110.66666666666667" y="317.66666666666669" width="206.66666666666663" height="24.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WGm-wB-5aK" secondAttribute="bottom" id="3Px-2E-djL"/>
+                                    <constraint firstAttribute="trailing" secondItem="WGm-wB-5aK" secondAttribute="trailing" id="8BO-nw-s5u"/>
+                                    <constraint firstItem="Isz-Uf-dT0" firstAttribute="centerX" secondItem="VkS-ah-Phs" secondAttribute="centerX" id="GXw-Y1-bO3"/>
+                                    <constraint firstItem="Isz-Uf-dT0" firstAttribute="centerY" secondItem="VkS-ah-Phs" secondAttribute="centerY" id="jhA-ki-Gn7"/>
+                                    <constraint firstItem="WGm-wB-5aK" firstAttribute="leading" secondItem="VkS-ah-Phs" secondAttribute="leading" id="uhn-sh-ecU"/>
+                                    <constraint firstItem="WGm-wB-5aK" firstAttribute="top" secondItem="VkS-ah-Phs" secondAttribute="top" id="uyn-il-X5r"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="WGm-wB-5aK" secondAttribute="bottom" id="0sY-Bg-wI7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VkS-ah-Phs" secondAttribute="trailing" id="2YH-4M-BQh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2u1-tQ-hBF" secondAttribute="trailing" constant="10" id="50d-k0-6e7"/>
                             <constraint firstItem="2u1-tQ-hBF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="6f9-ka-pke"/>
-                            <constraint firstItem="WGm-wB-5aK" firstAttribute="top" secondItem="2u1-tQ-hBF" secondAttribute="bottom" constant="15" id="BsH-75-lvG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGm-wB-5aK" secondAttribute="trailing" id="TpW-yE-ZTT"/>
-                            <constraint firstItem="WGm-wB-5aK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pQh-89-ygi"/>
+                            <constraint firstItem="VkS-ah-Phs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gcm-qZ-cOV"/>
+                            <constraint firstItem="VkS-ah-Phs" firstAttribute="top" secondItem="2u1-tQ-hBF" secondAttribute="bottom" constant="7.5" id="U61-eV-uNq"/>
+                            <constraint firstAttribute="bottom" secondItem="VkS-ah-Phs" secondAttribute="bottom" id="eaO-zj-I2f"/>
                             <constraint firstItem="2u1-tQ-hBF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="t5P-kV-Ifk"/>
                         </constraints>
                     </view>
@@ -110,13 +129,14 @@ Good Afternoon!</string>
                         <outlet property="currentScoreStackView" destination="iVk-pd-4h5" id="Sk7-TR-cZL"/>
                         <outlet property="greetingLabel" destination="cLO-oq-9Bx" id="gQC-f5-1sJ"/>
                         <outlet property="headerView" destination="2u1-tQ-hBF" id="Pv8-Ib-DsZ"/>
+                        <outlet property="noDataLabel" destination="Isz-Uf-dT0" id="rXx-FD-xec"/>
                         <outlet property="recentHistoryTableView" destination="WGm-wB-5aK" id="Mlr-jG-eH6"/>
                         <outlet property="yesButton" destination="TC3-bs-8ch" id="Mp4-ug-6Rs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="376" y="127"/>
+            <point key="canvasLocation" x="375.70093457943921" y="126.99784017278618"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4UW-KR-mRT">
