@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setupTableView(){
+        recentHistoryTableView.register(UINib(nibName: "HistoryTableViewCell", bundle: .main), forCellReuseIdentifier: UIConstant.Cell.HistoryTableViewCell.rawValue)
         recentHistoryTableView.delegate = self
         recentHistoryTableView.dataSource = self
     }
@@ -35,15 +36,17 @@ class HomeViewController: UIViewController {
         UIHelper.addCornerRadius(to: currentScoreStackView, withRadius: 6.0)
         UIHelper.addCornerRadius(to: yesButton,withRadius: 6.0)
         recentHistoryTableView.backgroundColor = UIColor.BackgroundColor
-        recentHistoryTableView.register(UINib(nibName: "HistoryTableViewCell", bundle: .main), forCellReuseIdentifier: UIConstant.Cell.HistoryTableViewCell.rawValue)
+        
         //TODO: set label to You have taken all the medicine for the day 👏🏻🥳! when the score hits 100
     }
     
     @IBAction func yesButtonOnTapped(_ sender: Any) {
+        //TODO:
     }
     
     @objc func seeMoreButtonTapped(){
-        print("See more tapped")
+        let historyVC = UIHelper.makeViewController(viewControllerName: .HistoryViewColntroller) as! HistoryViewController
+        self.navigationController?.pushViewController(historyVC, animated: true)
     }
     
 }

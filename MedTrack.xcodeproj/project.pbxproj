@@ -22,6 +22,7 @@
 		586CB08D27DC57EF00EA3280 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB08C27DC57EF00EA3280 /* UIHelper.swift */; };
 		586CB09227DC6CE200EA3280 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB09027DC6CE200EA3280 /* HistoryTableViewCell.swift */; };
 		586CB09327DC6CE200EA3280 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586CB09127DC6CE200EA3280 /* HistoryTableViewCell.xib */; };
+		586CB09627DC7CC200EA3280 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB09527DC7CC200EA3280 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		586CB08C27DC57EF00EA3280 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		586CB09027DC6CE200EA3280 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		586CB09127DC6CE200EA3280 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		586CB09527DC7CC200EA3280 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		586CB08227DC557700EA3280 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				586CB09427DC7C2200EA3280 /* HIstory */,
 				586CB08E27DC6CBB00EA3280 /* Home */,
 				586CB08327DC558300EA3280 /* Storyboard */,
 			);
@@ -215,6 +218,14 @@
 				586CB09127DC6CE200EA3280 /* HistoryTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		586CB09427DC7C2200EA3280 /* HIstory */ = {
+			isa = PBXGroup;
+			children = (
+				586CB09527DC7CC200EA3280 /* HistoryViewController.swift */,
+			);
+			path = HIstory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 				586CB05227DC4C7D00EA3280 /* HomeViewController.swift in Sources */,
 				586CB04E27DC4C7D00EA3280 /* AppDelegate.swift in Sources */,
 				586CB05027DC4C7D00EA3280 /* SceneDelegate.swift in Sources */,
+				586CB09627DC7CC200EA3280 /* HistoryViewController.swift in Sources */,
 				586CB08B27DC572000EA3280 /* UIConstants.swift in Sources */,
 				586CB08D27DC57EF00EA3280 /* UIHelper.swift in Sources */,
 			);
