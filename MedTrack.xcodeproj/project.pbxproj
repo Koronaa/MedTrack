@@ -101,14 +101,12 @@
 		586CB04C27DC4C7D00EA3280 /* MedTrack */ = {
 			isa = PBXGroup;
 			children = (
-				586CB04D27DC4C7D00EA3280 /* AppDelegate.swift */,
-				586CB04F27DC4C7D00EA3280 /* SceneDelegate.swift */,
-				586CB05127DC4C7D00EA3280 /* HomeViewController.swift */,
-				586CB05327DC4C7D00EA3280 /* Main.storyboard */,
-				586CB05927DC4C7E00EA3280 /* Assets.xcassets */,
-				586CB05B27DC4C7E00EA3280 /* LaunchScreen.storyboard */,
-				586CB05E27DC4C7E00EA3280 /* Info.plist */,
-				586CB05627DC4C7D00EA3280 /* MedTrack.xcdatamodeld */,
+				586CB08727DC55D600EA3280 /* Constants */,
+				586CB08627DC55C400EA3280 /* CoreData */,
+				586CB08427DC558F00EA3280 /* SupportingFiles */,
+				586CB08227DC557700EA3280 /* View */,
+				586CB08127DC557000EA3280 /* Helper */,
+				586CB08027DC556800EA3280 /* Extension */,
 			);
 			path = MedTrack;
 			sourceTree = "<group>";
@@ -128,6 +126,64 @@
 				586CB07327DC4C7E00EA3280 /* MedTrackUITestsLaunchTests.swift */,
 			);
 			path = MedTrackUITests;
+			sourceTree = "<group>";
+		};
+		586CB08027DC556800EA3280 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		586CB08127DC557000EA3280 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		586CB08227DC557700EA3280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				586CB05127DC4C7D00EA3280 /* HomeViewController.swift */,
+				586CB08327DC558300EA3280 /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		586CB08327DC558300EA3280 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				586CB05327DC4C7D00EA3280 /* Main.storyboard */,
+				586CB05B27DC4C7E00EA3280 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		586CB08427DC558F00EA3280 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				586CB04D27DC4C7D00EA3280 /* AppDelegate.swift */,
+				586CB04F27DC4C7D00EA3280 /* SceneDelegate.swift */,
+				586CB05927DC4C7E00EA3280 /* Assets.xcassets */,
+				586CB05E27DC4C7E00EA3280 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		586CB08627DC55C400EA3280 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				586CB05627DC4C7D00EA3280 /* MedTrack.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		586CB08727DC55D600EA3280 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,12 +501,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R3GW2NEGBJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MedTrack/Info.plist;
+				INFOPLIST_FILE = MedTrack/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,12 +530,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R3GW2NEGBJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MedTrack/Info.plist;
+				INFOPLIST_FILE = MedTrack/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
