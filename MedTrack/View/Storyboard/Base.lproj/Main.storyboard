@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWn-Tz-kcv">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2u1-tQ-hBF" userLabel="HeaderView">
-                                <rect key="frame" x="10" y="54" width="408" height="199"/>
+                                <rect key="frame" x="10" y="54" width="408" height="204"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLO-oq-9Bx">
                                         <rect key="frame" x="15" y="5" width="388" height="68.333333333333329"/>
@@ -28,19 +29,19 @@ Good Afternoon!</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4g6-Xp-WKH">
-                                        <rect key="frame" x="15" y="78.333333333333343" width="378" height="105.66666666666666"/>
+                                        <rect key="frame" x="15" y="78.333333333333343" width="378" height="110.66666666666666"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="iVk-pd-4h5">
-                                                <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="105.66666666666667"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="iVk-pd-4h5">
+                                                <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="110.66666666666667"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8U-ja-oze">
-                                                        <rect key="frame" x="14" y="0.0" width="89" height="102.66666666666667"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8U-ja-oze">
+                                                        <rect key="frame" x="25.333333333333343" y="0.0" width="89" height="102.66666666666667"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="75"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Score" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmq-K7-HVu">
-                                                        <rect key="frame" x="18" y="87.666666666666657" width="81" height="18"/>
+                                                        <rect key="frame" x="29.333333333333343" y="92.666666666666657" width="81" height="18"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -49,22 +50,25 @@ Good Afternoon!</string>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1q8-L3-4YC">
-                                                <rect key="frame" x="131.66666666666663" y="0.0" width="246.33333333333337" height="105.66666666666667"/>
+                                                <rect key="frame" x="154.66666666666663" y="0.0" width="223.33333333333337" height="110.66666666666667"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have you taken the medicine?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqv-TQ-mPE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="246.33333333333334" height="53"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you take the medicine?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqv-TQ-mPE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="223.33333333333334" height="55.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TC3-bs-8ch">
-                                                        <rect key="frame" x="0.0" y="53" width="246.33333333333334" height="52.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="55.333333333333314" width="223.33333333333334" height="55.333333333333343"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Yes">
                                                             <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="yesButtonOnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PS9-t0-utA"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -84,7 +88,7 @@ Good Afternoon!</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WGm-wB-5aK">
-                                <rect key="frame" x="0.0" y="253" width="428" height="673"/>
+                                <rect key="frame" x="0.0" y="273" width="428" height="653"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -94,13 +98,21 @@ Good Afternoon!</string>
                             <constraint firstAttribute="bottom" secondItem="WGm-wB-5aK" secondAttribute="bottom" id="0sY-Bg-wI7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2u1-tQ-hBF" secondAttribute="trailing" constant="10" id="50d-k0-6e7"/>
                             <constraint firstItem="2u1-tQ-hBF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="6f9-ka-pke"/>
-                            <constraint firstItem="WGm-wB-5aK" firstAttribute="top" secondItem="2u1-tQ-hBF" secondAttribute="bottom" id="BsH-75-lvG"/>
+                            <constraint firstItem="WGm-wB-5aK" firstAttribute="top" secondItem="2u1-tQ-hBF" secondAttribute="bottom" constant="15" id="BsH-75-lvG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGm-wB-5aK" secondAttribute="trailing" id="TpW-yE-ZTT"/>
                             <constraint firstItem="WGm-wB-5aK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pQh-89-ygi"/>
                             <constraint firstItem="2u1-tQ-hBF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="t5P-kV-Ifk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w5g-oK-Zzd"/>
+                    <connections>
+                        <outlet property="currentScoreLabel" destination="I8U-ja-oze" id="fvm-1i-3jx"/>
+                        <outlet property="currentScoreStackView" destination="iVk-pd-4h5" id="Sk7-TR-cZL"/>
+                        <outlet property="greetingLabel" destination="cLO-oq-9Bx" id="gQC-f5-1sJ"/>
+                        <outlet property="headerView" destination="2u1-tQ-hBF" id="Pv8-Ib-DsZ"/>
+                        <outlet property="recentHistoryTableView" destination="WGm-wB-5aK" id="Mlr-jG-eH6"/>
+                        <outlet property="yesButton" destination="TC3-bs-8ch" id="Mp4-ug-6Rs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
