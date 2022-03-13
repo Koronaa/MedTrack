@@ -20,6 +20,9 @@ MedTrack use number of open source projects to work properly
 * [RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa)
 * [BRYXBanner](https://github.com/bryx-inc/BRYXBanner)
 
+### Note:
+Please do a  `pod install` after checking out.
+
 
 ## Known Issues
 
