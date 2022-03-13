@@ -65,7 +65,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UIConstant.Cell.HistoryTableViewCell.rawValue) as! HistoryTableViewCell
         let score = [70,0,100,30,40].randomElement() ?? 0
-        cell.setupCell(for: score)
+//        cell.setupCell(for: score)
         return cell
     }
     

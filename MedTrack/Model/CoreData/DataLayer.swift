@@ -40,6 +40,7 @@ class DataLayer{
             let slice =  translationLayer.convertToMedTrackDTO(records: savedRecords).prefix(recentDataCount)
             let records = Array(slice)
             Log("Recent Records: \(records.count) records found")
+            return records
         }
         Log("No Records found")
         return nil
@@ -49,6 +50,7 @@ class DataLayer{
         if let savedRecords = mediTrackerDataService.getAllRecords(){
             let convertedRecords =  translationLayer.convertToMedTrackDTO(records: savedRecords)
             Log("Found \(convertedRecords.count) records")
+            return convertedRecords
         }
         Log("No Records found")
         return nil

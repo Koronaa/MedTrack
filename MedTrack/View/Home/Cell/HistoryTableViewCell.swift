@@ -8,7 +8,7 @@
 import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var timeStackView: UIStackView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -19,28 +19,37 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var nightTimeLabel: UILabel!
     
     
-    func setupCell(for score:Int){
-        //TODO: Data bind
-        setupUI(for: score)
+    var historyTVCViewModel: HistoryTableViewCellViewModel!{
+        didSet{
+            setupCellUI()
+            setupCell(for: historyTVCViewModel)
+        }
     }
     
-    
-    private func setupUI(for score:Int){
-        scoreLabel.text = score.description
+    private func setupCellUI(){
         containerView.backgroundColor = .MedTrackYellow
         UIHelper.addCornerRadius(to: containerView)
         UIHelper.addShadow(to: containerView, with: 1.5,and: 0.2)
         UIHelper.addCornerRadius(to: morningTimeLabel)
         UIHelper.addCornerRadius(to: eveningTimeLabel)
         UIHelper.addCornerRadius(to: nightTimeLabel)
-        
-        if score == 0{
+    }
+    
+    
+    private func setupCell(for cellVM:HistoryTableViewCellViewModel){
+        scoreLabel.text = cellVM.score.description
+        dateLabel.text = cellVM.descriptiveDateString
+        if cellVM.score == 0{
             UIHelper.hide(view: timeStackView)
             UIHelper.show(view: noMedicineTakenLabel)
         }else{
+            cellVM.isNightMedTaken ? UIHelper.show(view: nightTimeLabel) : UIHelper.hide(view: nightTimeLabel)
+            cellVM.isEveningMedTaken ? UIHelper.show(view: eveningTimeLabel) : UIHelper.hide(view: eveningTimeLabel)
+            cellVM.isMorningMedTaken ? UIHelper.show(view: morningTimeLabel) : UIHelper.hide(view: morningTimeLabel)
+            
             UIHelper.show(view: timeStackView)
             UIHelper.hide(view: noMedicineTakenLabel)
         }
-
     }
+    
 }
