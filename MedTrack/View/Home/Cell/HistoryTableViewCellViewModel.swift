@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RxRelay
 
 class HistoryTableViewCellViewModel{
     
@@ -26,6 +25,18 @@ class HistoryTableViewCellViewModel{
     
     var isNightMedTaken:Bool{
         record.nightDate != nil
+    }
+    
+    var morningMedTime:String?{
+        record.morningDate?.getTimeString()
+    }
+    
+    var eveningMedTime:String?{
+        record.eveningDate?.getTimeString()
+    }
+    
+    var nightMedTime:String?{
+        record.nightDate?.getTimeString()
     }
     
     var score:Int{
