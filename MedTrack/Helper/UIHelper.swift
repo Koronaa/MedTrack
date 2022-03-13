@@ -43,23 +43,9 @@ class UIHelper{
         view.layer.masksToBounds = true
     }
     
-    static func roundCorners(view :UIView, corners: UIRectCorner, radius: CGFloat){
-        let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        view.layer.mask = mask
-    }
-    
     static func refreshView(view:UIView){
         UIView.animate(withDuration: 0.3) {
             view.layoutIfNeeded()
-        }
-    }
-    
-    static func enableView(view:UIView){
-        DispatchQueue.main.async {
-            view.isUserInteractionEnabled = true
-            view.alpha = 1.0
         }
     }
     

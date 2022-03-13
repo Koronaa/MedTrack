@@ -28,7 +28,4 @@ class HistoryViewModel{
         }).disposed(by: bag)
         
     }
-    
-    
-    
 }
