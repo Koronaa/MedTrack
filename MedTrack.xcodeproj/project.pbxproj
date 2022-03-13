@@ -27,6 +27,12 @@
 		5872D80427DDA304009E28A9 /* MedTracker+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80327DDA304009E28A9 /* MedTracker+CoreDataClass.swift */; };
 		5872D80627DDA6E0009E28A9 /* MedTrackerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80527DDA6E0009E28A9 /* MedTrackerDataService.swift */; };
 		5872D80827DDAE55009E28A9 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80727DDAE55009E28A9 /* UserMessage.swift */; };
+		5872D80A27DDB44F009E28A9 /* MedTrackerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80927DDB44F009E28A9 /* MedTrackerDTO.swift */; };
+		5872D80D27DDD223009E28A9 /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80C27DDD223009E28A9 /* DataLayer.swift */; };
+		5872D80F27DDD325009E28A9 /* TranslationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80E27DDD325009E28A9 /* TranslationLayer.swift */; };
+		5872D81127DDD6BB009E28A9 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D81027DDD6BB009E28A9 /* Date+Extensions.swift */; };
+		5872D81427DDDD58009E28A9 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D81327DDDD58009E28A9 /* LogManager.swift */; };
+		5872D81627DDDFD9009E28A9 /* ModelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D81527DDDFD9009E28A9 /* ModelLayer.swift */; };
 		96C05D8AF345B26BCCC9BBDB /* Pods_MedTrackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6A4AAB0546F22FBC01C57A /* Pods_MedTrackTests.framework */; };
 		C4D5FC7C8DCFE70A4C185331 /* Pods_MedTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B7EDB881DE9D2954FDDFE8 /* Pods_MedTrack.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +82,12 @@
 		5872D80327DDA304009E28A9 /* MedTracker+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedTracker+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5872D80527DDA6E0009E28A9 /* MedTrackerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedTrackerDataService.swift; sourceTree = "<group>"; };
 		5872D80727DDAE55009E28A9 /* UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
+		5872D80927DDB44F009E28A9 /* MedTrackerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedTrackerDTO.swift; sourceTree = "<group>"; };
+		5872D80C27DDD223009E28A9 /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
+		5872D80E27DDD325009E28A9 /* TranslationLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationLayer.swift; sourceTree = "<group>"; };
+		5872D81027DDD6BB009E28A9 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		5872D81327DDDD58009E28A9 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		5872D81527DDDFD9009E28A9 /* ModelLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLayer.swift; sourceTree = "<group>"; };
 		7D436DFDDE4093EB0D320559 /* Pods-MedTrackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedTrackTests.release.xcconfig"; path = "Target Support Files/Pods-MedTrackTests/Pods-MedTrackTests.release.xcconfig"; sourceTree = "<group>"; };
 		86B7EDB881DE9D2954FDDFE8 /* Pods_MedTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FE225ECD4103DB0B94DE22 /* Pods-MedTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedTrack.release.xcconfig"; path = "Target Support Files/Pods-MedTrack/Pods-MedTrack.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +158,7 @@
 		586CB04C27DC4C7D00EA3280 /* MedTrack */ = {
 			isa = PBXGroup;
 			children = (
+				5872D81227DDDD48009E28A9 /* Manager */,
 				5872D80227DDA2E5009E28A9 /* Model */,
 				586CB08727DC55D600EA3280 /* Constants */,
 				586CB08427DC558F00EA3280 /* SupportingFiles */,
@@ -177,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				586CB08827DC568300EA3280 /* UIColor+Extensions.swift */,
+				5872D81027DDD6BB009E28A9 /* Date+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -225,6 +239,7 @@
 				586CB05627DC4C7D00EA3280 /* MedTrack.xcdatamodeld */,
 				5872D80327DDA304009E28A9 /* MedTracker+CoreDataClass.swift */,
 				5872D80527DDA6E0009E28A9 /* MedTrackerDataService.swift */,
+				5872D80C27DDD223009E28A9 /* DataLayer.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -268,8 +283,19 @@
 			children = (
 				586CB08627DC55C400EA3280 /* CoreData */,
 				5872D80727DDAE55009E28A9 /* UserMessage.swift */,
+				5872D80927DDB44F009E28A9 /* MedTrackerDTO.swift */,
+				5872D80E27DDD325009E28A9 /* TranslationLayer.swift */,
+				5872D81527DDDFD9009E28A9 /* ModelLayer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5872D81227DDDD48009E28A9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5872D81327DDDD58009E28A9 /* LogManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		66BF2F0AB669E2FA2D82A5A5 /* Pods */ = {
@@ -525,18 +551,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5872D81427DDDD58009E28A9 /* LogManager.swift in Sources */,
+				5872D81627DDDFD9009E28A9 /* ModelLayer.swift in Sources */,
 				5872D80827DDAE55009E28A9 /* UserMessage.swift in Sources */,
 				586CB05827DC4C7D00EA3280 /* MedTrack.xcdatamodeld in Sources */,
 				5872D80627DDA6E0009E28A9 /* MedTrackerDataService.swift in Sources */,
 				586CB08927DC568300EA3280 /* UIColor+Extensions.swift in Sources */,
+				5872D80A27DDB44F009E28A9 /* MedTrackerDTO.swift in Sources */,
+				5872D80D27DDD223009E28A9 /* DataLayer.swift in Sources */,
 				586CB09227DC6CE200EA3280 /* HistoryTableViewCell.swift in Sources */,
 				5872D80427DDA304009E28A9 /* MedTracker+CoreDataClass.swift in Sources */,
 				586CB05227DC4C7D00EA3280 /* HomeViewController.swift in Sources */,
+				5872D81127DDD6BB009E28A9 /* Date+Extensions.swift in Sources */,
 				586CB04E27DC4C7D00EA3280 /* AppDelegate.swift in Sources */,
 				586CB05027DC4C7D00EA3280 /* SceneDelegate.swift in Sources */,
 				586CB09627DC7CC200EA3280 /* HistoryViewController.swift in Sources */,
 				586CB08B27DC572000EA3280 /* UIConstants.swift in Sources */,
 				586CB08D27DC57EF00EA3280 /* UIHelper.swift in Sources */,
+				5872D80F27DDD325009E28A9 /* TranslationLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
