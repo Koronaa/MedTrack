@@ -23,11 +23,6 @@ MedTrack use number of open source projects to work properly
 ### Note:
 Please do a  `pod install` after checking out.
 
-
-### Note:
-Please do a  `pod install` after checking out.
-
-
 ## Known Issues
 
 * App wouldn't show the records where the user hasn't taken any medicine (WIP in dev)
