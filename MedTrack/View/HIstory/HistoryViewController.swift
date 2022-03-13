@@ -29,7 +29,7 @@ class HistoryViewController: UIViewController {
     
     private func setupUI(){
         UIHelper.addCornerRadius(to: backButton)
-        
+        historyTableView.backgroundColor = .BackgroundColor
     }
     
     private func getAllRecords(){
