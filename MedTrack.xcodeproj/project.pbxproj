@@ -35,6 +35,8 @@
 		5872D81627DDDFD9009E28A9 /* ModelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D81527DDDFD9009E28A9 /* ModelLayer.swift */; };
 		5872D81827DDE7DA009E28A9 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D81727DDE7DA009E28A9 /* HistoryViewModel.swift */; };
 		5872D81A27DDF504009E28A9 /* HistoryTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D81927DDF504009E28A9 /* HistoryTableViewCellViewModel.swift */; };
+		5872D81C27DE1A82009E28A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D81B27DE1A82009E28A9 /* HomeViewModel.swift */; };
+		5872D82027DE3373009E28A9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D81F27DE3373009E28A9 /* AppConstants.swift */; };
 		96C05D8AF345B26BCCC9BBDB /* Pods_MedTrackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6A4AAB0546F22FBC01C57A /* Pods_MedTrackTests.framework */; };
 		C4D5FC7C8DCFE70A4C185331 /* Pods_MedTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B7EDB881DE9D2954FDDFE8 /* Pods_MedTrack.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,8 @@
 		5872D81527DDDFD9009E28A9 /* ModelLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLayer.swift; sourceTree = "<group>"; };
 		5872D81727DDE7DA009E28A9 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		5872D81927DDF504009E28A9 /* HistoryTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		5872D81B27DE1A82009E28A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5872D81F27DE3373009E28A9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		7D436DFDDE4093EB0D320559 /* Pods-MedTrackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedTrackTests.release.xcconfig"; path = "Target Support Files/Pods-MedTrackTests/Pods-MedTrackTests.release.xcconfig"; sourceTree = "<group>"; };
 		86B7EDB881DE9D2954FDDFE8 /* Pods_MedTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FE225ECD4103DB0B94DE22 /* Pods-MedTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedTrack.release.xcconfig"; path = "Target Support Files/Pods-MedTrack/Pods-MedTrack.release.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				586CB08A27DC572000EA3280 /* UIConstants.swift */,
+				5872D81F27DE3373009E28A9 /* AppConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			children = (
 				586CB08F27DC6CCA00EA3280 /* Cell */,
 				586CB05127DC4C7D00EA3280 /* HomeViewController.swift */,
+				5872D81B27DE1A82009E28A9 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -560,6 +566,7 @@
 				5872D81427DDDD58009E28A9 /* LogManager.swift in Sources */,
 				5872D81627DDDFD9009E28A9 /* ModelLayer.swift in Sources */,
 				5872D80827DDAE55009E28A9 /* UserMessage.swift in Sources */,
+				5872D82027DE3373009E28A9 /* AppConstants.swift in Sources */,
 				586CB05827DC4C7D00EA3280 /* MedTrack.xcdatamodeld in Sources */,
 				5872D80627DDA6E0009E28A9 /* MedTrackerDataService.swift in Sources */,
 				5872D81827DDE7DA009E28A9 /* HistoryViewModel.swift in Sources */,
@@ -573,6 +580,7 @@
 				5872D81127DDD6BB009E28A9 /* Date+Extensions.swift in Sources */,
 				586CB04E27DC4C7D00EA3280 /* AppDelegate.swift in Sources */,
 				586CB05027DC4C7D00EA3280 /* SceneDelegate.swift in Sources */,
+				5872D81C27DE1A82009E28A9 /* HomeViewModel.swift in Sources */,
 				586CB09627DC7CC200EA3280 /* HistoryViewController.swift in Sources */,
 				586CB08B27DC572000EA3280 /* UIConstants.swift in Sources */,
 				586CB08D27DC57EF00EA3280 /* UIHelper.swift in Sources */,

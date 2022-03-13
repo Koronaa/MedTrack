@@ -11,7 +11,7 @@ class DataLayer{
     
     private let mediTrackerDataService:MedTrackerDataService
     private let translationLayer:TranslationLayer
-    private let recentDataCount = 10
+    private let recentDataCount = AppConstants.RECENT_DATA_COUNT
     
      init(){
          mediTrackerDataService = MedTrackerDataService()

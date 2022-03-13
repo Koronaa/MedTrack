@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="MedTracker" representedClassName="MedTracker" syncable="YES">
+    <entity name="MedTracker" representedClassName=".MedTracker" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="eveningDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="morningDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>

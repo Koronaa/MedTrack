@@ -28,33 +28,19 @@ class HistoryTableViewCellViewModel{
     }
     
     var morningMedTime:String?{
-        record.morningDate?.getTimeString()
+        return record.morningDate != nil ? " \(record.morningDate?.getTimeString() ?? "") " : ""
     }
     
     var eveningMedTime:String?{
-        record.eveningDate?.getTimeString()
+        return record.eveningDate != nil ? " \(record.eveningDate?.getTimeString() ?? "") " : ""
     }
     
     var nightMedTime:String?{
-        record.nightDate?.getTimeString()
+        return record.nightDate != nil ? " \(record.nightDate?.getTimeString() ?? "") " : ""
     }
     
     var score:Int{
-        var score = 0
-        
-        if isMorningMedTaken{
-            score += 30
-        }
-        
-        if isEveningMedTaken{
-            score += 30
-        }
-        
-        if isNightMedTaken{
-            score += 40
-        }
-        
-        return score
+        record.score
     }
     
     var descriptiveDateString:String{

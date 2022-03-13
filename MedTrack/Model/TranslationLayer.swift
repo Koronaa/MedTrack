@@ -12,7 +12,7 @@ class TranslationLayer{
     func convertToMedTrackDTO(records:[MedTracker]) -> [MedTrackerDTO]{
         var dtos:[MedTrackerDTO] = []
         records.forEach { medTracker in
-            dtos.append(MedTrackerDTO(date: medTracker.date, morningDate: medTracker.morningDate, eveningDate: medTracker.eveningDate, nightDate: medTracker.morningDate, score: medTracker.score))
+            dtos.append(MedTrackerDTO(date: medTracker.date, morningDate: medTracker.morningDate, eveningDate: medTracker.eveningDate, nightDate: medTracker.nightDate, score: Int(medTracker.score)))
         }
         return dtos
     }

@@ -43,25 +43,23 @@ class HistoryTableViewCell: UITableViewCell {
             UIHelper.hide(view: timeStackView)
             UIHelper.show(view: noMedicineTakenLabel)
         }else{
+            UIHelper.hide(view: morningTimeLabel)
+            UIHelper.hide(view: eveningTimeLabel)
+            UIHelper.hide(view: nightTimeLabel)
+            
             if cellVM.isNightMedTaken{
+                nightTimeLabel.text = cellVM.nightMedTime
                 UIHelper.show(view: nightTimeLabel)
-                nightTimeLabel.text = cellVM.morningMedTime
-            }else{
-                UIHelper.hide(view: nightTimeLabel)
             }
             
             if cellVM.isEveningMedTaken{
-                UIHelper.show(view: eveningTimeLabel)
                 eveningTimeLabel.text = cellVM.eveningMedTime
-            }else{
-                UIHelper.hide(view: eveningTimeLabel)
+                UIHelper.show(view: eveningTimeLabel)
             }
             
             if cellVM.isMorningMedTaken{
-                UIHelper.show(view: morningTimeLabel)
                 morningTimeLabel.text = cellVM.morningMedTime
-            }else{
-                UIHelper.hide(view: morningTimeLabel)
+                UIHelper.show(view: morningTimeLabel)
             }
             
             UIHelper.show(view: timeStackView)

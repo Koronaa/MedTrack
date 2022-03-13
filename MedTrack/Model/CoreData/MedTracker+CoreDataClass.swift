@@ -18,7 +18,7 @@ class MedTracker:NSManagedObject,Entitiable{
     @NSManaged var morningDate:Date?
     @NSManaged var eveningDate:Date?
     @NSManaged var nightDate:Date?
-    @NSManaged var score:Int
+    @NSManaged var score:Int16
     
     static var entityName: String { return "MedTracker" }
     

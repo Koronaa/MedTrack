@@ -54,7 +54,7 @@ class MedTrackerDataService{
         newRecord.eveningDate = medtracker.eveningDate
         newRecord.morningDate = medtracker.morningDate
         newRecord.nightDate = medtracker.nightDate
-        newRecord.score = medtracker.score
+        newRecord.score = Int16(medtracker.score)
         
         do{
             try context.save()
@@ -71,7 +71,7 @@ class MedTrackerDataService{
         if let task = getRecord(for: date){
             do{
                 task.date = updatedRecord.date.removeTimeStamp
-                task.score = updatedRecord.score
+                task.score = Int16(updatedRecord.score)
                 task.nightDate = updatedRecord.nightDate
                 task.morningDate = updatedRecord.morningDate
                 task.eveningDate = updatedRecord.eveningDate

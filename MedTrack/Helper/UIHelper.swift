@@ -63,14 +63,6 @@ class UIHelper{
         }
     }
     
-    static func hideView(view:UIView){
-        view.isHidden = true
-    }
-    
-    static func showView(view:UIView){
-        view.isHidden = false
-    }
-    
     static func hide(view:UIView){
         DispatchQueue.main.async {
             view.isHidden = true

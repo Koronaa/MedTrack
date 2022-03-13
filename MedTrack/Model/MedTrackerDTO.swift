@@ -15,4 +15,22 @@ struct MedTrackerDTO{
     var nightDate:Date?
     var score:Int
     
+    static func calculateScore(for record:MedTrackerDTO) -> Int{
+        var score = 0
+        
+        if record.morningDate != nil{
+            score += 30
+        }
+        
+        if record.eveningDate != nil{
+            score += 30
+        }
+        
+        if record.nightDate != nil{
+            score += 40
+        }
+        
+        return score
+    }
+    
 }
