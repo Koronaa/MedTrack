@@ -23,6 +23,8 @@
 		586CB09227DC6CE200EA3280 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB09027DC6CE200EA3280 /* HistoryTableViewCell.swift */; };
 		586CB09327DC6CE200EA3280 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586CB09127DC6CE200EA3280 /* HistoryTableViewCell.xib */; };
 		586CB09627DC7CC200EA3280 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB09527DC7CC200EA3280 /* HistoryViewController.swift */; };
+		5872D80427DDA304009E28A9 /* MedTracker+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80327DDA304009E28A9 /* MedTracker+CoreDataClass.swift */; };
+		5872D80627DDA6E0009E28A9 /* MedTrackerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80527DDA6E0009E28A9 /* MedTrackerDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		586CB09027DC6CE200EA3280 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		586CB09127DC6CE200EA3280 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		586CB09527DC7CC200EA3280 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		5872D80327DDA304009E28A9 /* MedTracker+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedTracker+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5872D80527DDA6E0009E28A9 /* MedTrackerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedTrackerDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +117,8 @@
 		586CB04C27DC4C7D00EA3280 /* MedTrack */ = {
 			isa = PBXGroup;
 			children = (
+				5872D80227DDA2E5009E28A9 /* Model */,
 				586CB08727DC55D600EA3280 /* Constants */,
-				586CB08627DC55C400EA3280 /* CoreData */,
 				586CB08427DC558F00EA3280 /* SupportingFiles */,
 				586CB08227DC557700EA3280 /* View */,
 				586CB08127DC557000EA3280 /* Helper */,
@@ -190,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				586CB05627DC4C7D00EA3280 /* MedTrack.xcdatamodeld */,
+				5872D80327DDA304009E28A9 /* MedTracker+CoreDataClass.swift */,
+				5872D80527DDA6E0009E28A9 /* MedTrackerDataService.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -226,6 +232,14 @@
 				586CB09527DC7CC200EA3280 /* HistoryViewController.swift */,
 			);
 			path = HIstory;
+			sourceTree = "<group>";
+		};
+		5872D80227DDA2E5009E28A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				586CB08627DC55C400EA3280 /* CoreData */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,8 +375,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				586CB05827DC4C7D00EA3280 /* MedTrack.xcdatamodeld in Sources */,
+				5872D80627DDA6E0009E28A9 /* MedTrackerDataService.swift in Sources */,
 				586CB08927DC568300EA3280 /* UIColor+Extensions.swift in Sources */,
 				586CB09227DC6CE200EA3280 /* HistoryTableViewCell.swift in Sources */,
+				5872D80427DDA304009E28A9 /* MedTracker+CoreDataClass.swift in Sources */,
 				586CB05227DC4C7D00EA3280 /* HomeViewController.swift in Sources */,
 				586CB04E27DC4C7D00EA3280 /* AppDelegate.swift in Sources */,
 				586CB05027DC4C7D00EA3280 /* SceneDelegate.swift in Sources */,
