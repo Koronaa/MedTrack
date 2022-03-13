@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-enum TimePeriod:String{
+enum TimePeriod:String,CaseIterable{
     case Morning = "Morning"
     case Afternoon = "Afternoon"
     case Night = "Evening"
@@ -22,11 +22,16 @@ class HomeViewModel{
     var recentRecords:[MedTrackerDTO] = []
     private let modelLayer = ModelLayer()
     private let bag = DisposeBag()
+    private let notificationManager = LocalNotificationManager.shared
     
     var score:PublishSubject<Int> = PublishSubject<Int>()
     var errorMessage:PublishSubject<UserMessage> = PublishSubject<UserMessage>()
     var successMessage:PublishSubject<UserMessage> = PublishSubject<UserMessage>()
     var dataUpdated:PublishSubject<Bool> = PublishSubject<Bool>()
+    
+    init(){
+        setupNotifications()
+    }
     
     
     var hasTakenNightMed:Bool?{
@@ -49,16 +54,16 @@ class HomeViewModel{
         return "Hey, Good \(timeOFDay)! 👋🏻"
     }
     
-    func addRecord(){
-        
-        let timePedriod = getTimePeriod(for: Date())
+    
+    func addRecord(for date:Date){
+        let timePedriod = getTimePeriod(for: date)
         switch timePedriod {
         case .Morning:
-            currentRecord?.morningDate = Date()
+            currentRecord?.morningDate = date
         case .Afternoon:
-            currentRecord?.eveningDate = Date()
+            currentRecord?.eveningDate = date
         case .Night:
-            currentRecord?.nightDate = Date()
+            currentRecord?.nightDate = date
         }
         
         let tempRecord = currentRecord!
@@ -120,4 +125,61 @@ class HomeViewModel{
     }
     
     
+}
+
+//MARK: Notifications
+extension HomeViewModel{
+    
+    func setupNotifications(){
+        notificationManager.requestAuthorization { [weak self] isAuthorized in
+            if isAuthorized && !(self?.hasSetNofifications ?? true){
+                self?.scheduleNotification(for: .Morning)
+                self?.scheduleNotification(for: .Afternoon)
+                self?.scheduleNotification(for: .Night)
+            }
+        }
+    }
+    
+    func updateNotifications(){
+        if let currentRec = self.currentRecord, hasSetNofifications{
+            let date = Date()
+            let hour = Calendar.current.component(.hour, from: date)
+            let period = getTimePeriod(for: date)
+            
+            for timePeriod in TimePeriod.allCases{
+                if UserDefaultsManager.getID(period: timePeriod) == nil{
+                    scheduleNotification(for: timePeriod)
+                }
+            }
+            
+            
+            if  (period == .Morning && hour < AppConstants.MORNING_NOTIFICATION_HOUR && currentRec.morningDate != nil) ||
+                    (period == .Afternoon && hour < AppConstants.AFTERNOON_NOTIFICATION_HOUR && currentRec.eveningDate != nil) ||
+                    (period == .Night && hour < AppConstants.NIGHT_NOTIFICATION_HOUR && currentRec.nightDate != nil){
+                cancelSheduledNotification(for: period)
+            }
+        }
+    }
+    
+    var hasSetNofifications:Bool{
+        UserDefaultsManager.hasNotificationsScheduled()
+    }
+    
+    func scheduleNotification(for period:TimePeriod){
+        notificationManager.sheduleNotification(for: period) { identifier in
+            if let id = identifier{
+                UserDefaultsManager.setID(id: id, for: period)
+                UserDefaultsManager.setNotificationTriggeredVal(isSet: true)
+                print("Scheduled notification for \(period.rawValue)")
+            }
+        }
+    }
+    
+    func cancelSheduledNotification(for period:TimePeriod){
+        if let id = UserDefaultsManager.getID(period: period){
+            Log("Cancelling \(period.rawValue) Notification")
+            notificationManager.cancelScheduledNotification(for: id)
+            UserDefaultsManager.removeID(period: period)
+        }
+    }
 }

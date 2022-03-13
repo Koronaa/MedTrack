@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F680B5FCB08B6F31427D020 /* Pods_MedTrack_MedTrackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A590F62F38D0947C494D8B /* Pods_MedTrack_MedTrackUITests.framework */; };
+		5852C26227DE6504005CB10B /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5852C26127DE6504005CB10B /* LocalNotificationManager.swift */; };
+		5852C26427DE6D41005CB10B /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5852C26327DE6D41005CB10B /* UserDefaultsManager.swift */; };
 		586CB04E27DC4C7D00EA3280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB04D27DC4C7D00EA3280 /* AppDelegate.swift */; };
 		586CB05027DC4C7D00EA3280 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB04F27DC4C7D00EA3280 /* SceneDelegate.swift */; };
 		586CB05227DC4C7D00EA3280 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB05127DC4C7D00EA3280 /* HomeViewController.swift */; };
@@ -63,6 +65,8 @@
 		33524AB8F53E6FE15EA9D822 /* Pods-MedTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedTrack.debug.xcconfig"; path = "Target Support Files/Pods-MedTrack/Pods-MedTrack.debug.xcconfig"; sourceTree = "<group>"; };
 		42F630E95E9BA9261F627E3A /* Pods-MedTrack-MedTrackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedTrack-MedTrackUITests.debug.xcconfig"; path = "Target Support Files/Pods-MedTrack-MedTrackUITests/Pods-MedTrack-MedTrackUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		56A590F62F38D0947C494D8B /* Pods_MedTrack_MedTrackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedTrack_MedTrackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5852C26127DE6504005CB10B /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		5852C26327DE6D41005CB10B /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		586CB04A27DC4C7D00EA3280 /* MedTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		586CB04D27DC4C7D00EA3280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		586CB04F27DC4C7D00EA3280 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				5872D81327DDDD58009E28A9 /* LogManager.swift */,
+				5852C26127DE6504005CB10B /* LocalNotificationManager.swift */,
+				5852C26327DE6D41005CB10B /* UserDefaultsManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -565,6 +571,7 @@
 			files = (
 				5872D81427DDDD58009E28A9 /* LogManager.swift in Sources */,
 				5872D81627DDDFD9009E28A9 /* ModelLayer.swift in Sources */,
+				5852C26227DE6504005CB10B /* LocalNotificationManager.swift in Sources */,
 				5872D80827DDAE55009E28A9 /* UserMessage.swift in Sources */,
 				5872D82027DE3373009E28A9 /* AppConstants.swift in Sources */,
 				586CB05827DC4C7D00EA3280 /* MedTrack.xcdatamodeld in Sources */,
@@ -576,6 +583,7 @@
 				586CB09227DC6CE200EA3280 /* HistoryTableViewCell.swift in Sources */,
 				5872D80427DDA304009E28A9 /* MedTracker+CoreDataClass.swift in Sources */,
 				5872D81A27DDF504009E28A9 /* HistoryTableViewCellViewModel.swift in Sources */,
+				5852C26427DE6D41005CB10B /* UserDefaultsManager.swift in Sources */,
 				586CB05227DC4C7D00EA3280 /* HomeViewController.swift in Sources */,
 				5872D81127DDD6BB009E28A9 /* Date+Extensions.swift in Sources */,
 				586CB04E27DC4C7D00EA3280 /* AppDelegate.swift in Sources */,
@@ -770,9 +778,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -800,9 +809,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

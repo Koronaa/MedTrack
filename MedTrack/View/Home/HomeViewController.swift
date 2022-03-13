@@ -103,6 +103,7 @@ class HomeViewController: UIViewController {
     
     private func setupSubscriptions(){
         homeVM.score.subscribe (onNext:{ score in
+            self.homeVM.updateNotifications()
             DispatchQueue.main.async {
                 self.setupScoreUI(for: score)
             }
@@ -135,7 +136,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func yesButtonOnTapped(_ sender: Any) {
-        homeVM.addRecord()
+        homeVM.addRecord(for: Date())
     }
     
     @objc func seeMoreButtonTapped(){
