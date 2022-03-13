@@ -11,6 +11,8 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var historyTableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var noDataLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,8 @@ extension HistoryViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UIConstant.Cell.HistoryTableViewCell.rawValue) as! HistoryTableViewCell
-        cell.setupCell()
+        let score = [70,0,100,30,40].randomElement() ?? 0
+        cell.setupCell(for: score)
         return cell
     }
     

@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var currentScoreLabel: UILabel!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var recentHistoryTableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var noDataLabel: UILabel!
     
     override func viewDidLoad() {
@@ -63,7 +64,8 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UIConstant.Cell.HistoryTableViewCell.rawValue) as! HistoryTableViewCell
-        cell.setupCell()
+        let score = [70,0,100,30,40].randomElement() ?? 0
+        cell.setupCell(for: score)
         return cell
     }
     
@@ -79,13 +81,14 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
         let myLabel = UILabel()
         myLabel.frame = CGRect(x: 15, y: 1, width: 320, height: 20)
         myLabel.font = UIFont(name: "Avenir-Heavy", size: 16)
+        myLabel.textColor = .darkGray
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
         
         let seeMoreButton = UIButton()
         seeMoreButton.setTitle("See more", for: .normal)
         seeMoreButton.tag = section
         seeMoreButton.titleLabel?.font = UIFont(name: "Avenir-Medium", size: 15)
-        seeMoreButton.setTitleColor(.darkGray, for: .normal)
+        seeMoreButton.setTitleColor(.lightGray, for: .normal)
         
         seeMoreButton.frame = CGRect(x: self.view.frame.width - 110, y: 1, width: 120, height: 20)
         seeMoreButton.addTarget(self, action: #selector(seeMoreButtonTapped), for: .touchUpInside)
