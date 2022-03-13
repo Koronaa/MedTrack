@@ -16,7 +16,6 @@ class UIConstant{
     enum StoryBoardID:String {
         case HomeViewController = "HomeViewController"
         case HistoryViewColntroller = "HistoryViewColntroller"
-        case FilterViewController = "FilterViewController"
     }
     
     enum Cell:String {

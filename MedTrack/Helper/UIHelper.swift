@@ -7,6 +7,13 @@
 
 import Foundation
 import UIKit
+import BRYXBanner
+
+enum BannerType{
+    case Error
+    case Warning
+    case Success
+}
 
 class UIHelper{
     
@@ -36,32 +43,10 @@ class UIHelper{
         view.layer.masksToBounds = true
     }
     
-    static func roundCorners(view :UIView, corners: UIRectCorner, radius: CGFloat){
-        let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        view.layer.mask = mask
-    }
-    
     static func refreshView(view:UIView){
         UIView.animate(withDuration: 0.3) {
             view.layoutIfNeeded()
         }
-    }
-    
-    static func enableView(view:UIView){
-        DispatchQueue.main.async {
-            view.isUserInteractionEnabled = true
-            view.alpha = 1.0
-        }
-    }
-    
-    static func hideView(view:UIView){
-        view.isHidden = true
-    }
-    
-    static func showView(view:UIView){
-        view.isHidden = false
     }
     
     static func hide(view:UIView){
@@ -76,6 +61,30 @@ class UIHelper{
         }
     }
     
+    private static func makeBanner(title:String,message:String,style:BannerType) -> Banner{
+        var bannerBackground:UIColor!
+        switch style {
+        case .Error:
+            bannerBackground = .MedTrackErrorRed
+        case .Success:
+            bannerBackground =  .MedTrackSuccessGreen
+        case .Warning:
+            bannerBackground =  .MedTrackWarningYellow
+        }
+        
+        let banner = Banner(title: title, subtitle: message, backgroundColor: bannerBackground)
+        banner.textColor = .black
+        banner.titleLabel.font = UIFont(name: "Avenir-Heavy", size: 16)
+        banner.detailLabel.font = UIFont(name: "Avenir-Medium", size: 15)
+        return banner
+    }
     
+    static func showUserMessage(for message:UserMessage,type:BannerType = .Error){
+        DispatchQueue.main.async {
+            let banner = makeBanner(title: message.title, message: message.message, style: type)
+            banner.dismissesOnTap = true
+            banner.show(duration: 2.0)
+        }
+    }
     
 }
