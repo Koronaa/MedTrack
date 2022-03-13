@@ -26,6 +26,7 @@
 		586CB09627DC7CC200EA3280 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586CB09527DC7CC200EA3280 /* HistoryViewController.swift */; };
 		5872D80427DDA304009E28A9 /* MedTracker+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80327DDA304009E28A9 /* MedTracker+CoreDataClass.swift */; };
 		5872D80627DDA6E0009E28A9 /* MedTrackerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80527DDA6E0009E28A9 /* MedTrackerDataService.swift */; };
+		5872D80827DDAE55009E28A9 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872D80727DDAE55009E28A9 /* UserMessage.swift */; };
 		96C05D8AF345B26BCCC9BBDB /* Pods_MedTrackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6A4AAB0546F22FBC01C57A /* Pods_MedTrackTests.framework */; };
 		C4D5FC7C8DCFE70A4C185331 /* Pods_MedTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B7EDB881DE9D2954FDDFE8 /* Pods_MedTrack.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		586CB09527DC7CC200EA3280 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		5872D80327DDA304009E28A9 /* MedTracker+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedTracker+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5872D80527DDA6E0009E28A9 /* MedTrackerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedTrackerDataService.swift; sourceTree = "<group>"; };
+		5872D80727DDAE55009E28A9 /* UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
 		7D436DFDDE4093EB0D320559 /* Pods-MedTrackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedTrackTests.release.xcconfig"; path = "Target Support Files/Pods-MedTrackTests/Pods-MedTrackTests.release.xcconfig"; sourceTree = "<group>"; };
 		86B7EDB881DE9D2954FDDFE8 /* Pods_MedTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FE225ECD4103DB0B94DE22 /* Pods-MedTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedTrack.release.xcconfig"; path = "Target Support Files/Pods-MedTrack/Pods-MedTrack.release.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				586CB08627DC55C400EA3280 /* CoreData */,
+				5872D80727DDAE55009E28A9 /* UserMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5872D80827DDAE55009E28A9 /* UserMessage.swift in Sources */,
 				586CB05827DC4C7D00EA3280 /* MedTrack.xcdatamodeld in Sources */,
 				5872D80627DDA6E0009E28A9 /* MedTrackerDataService.swift in Sources */,
 				586CB08927DC568300EA3280 /* UIColor+Extensions.swift in Sources */,
