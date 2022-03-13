@@ -1,5 +1,5 @@
 # MedTrack
-Simple iOS app written in Swift 5 to track daily medicine
+Simple iOS app written in Swift 5 to track daily medicine use.
 
 
 
@@ -8,12 +8,12 @@ Simple iOS app written in Swift 5 to track daily medicine
 
 ## Supports
 
-iOS 10+
+iOS 15.0+
 
 
 ## Libraries Used
 
-Corona use number of open source projects to work properly
+MedTrack use number of open source projects to work properly
 
 
 * [RxSwift](https://github.com/ReactiveX/RxSwift)
@@ -21,13 +21,14 @@ Corona use number of open source projects to work properly
 * [BRYXBanner](https://github.com/bryx-inc/BRYXBanner)
 
 
+## Known Issues
+
+* App wouldn't show the records where the user hasn't taken any medicine (WIP in dev)
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-
-## License
-[MIT](https://github.com/Koronaa/Corona/blob/master/LICENSE)
     
 
 
