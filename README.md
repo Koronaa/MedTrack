@@ -23,16 +23,9 @@ MedTrack use number of open source projects to work properly
 ### Note:
 Please do a  `pod install` after checking out.
 
-
-## Known Issues
-
-* Multiple notifications fires at times (WIP)
-
 ## ToDo
 
-* Known Issues
 * Unit Testing
-
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
