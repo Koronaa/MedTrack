@@ -70,7 +70,7 @@ class LocalNotificationManager{
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
-        let uuid = UUID().uuidString
+        let uuid = period.rawValue
         let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.add(request) { error in

@@ -156,17 +156,12 @@ extension HomeViewModel{
             let hour = Calendar.current.component(.hour, from: date)
             let period = getTimePeriod(for: date)
             
-            for timePeriod in TimePeriod.allCases{
-                if UserDefaultsManager.getID(period: timePeriod) == nil{
-                    scheduleNotification(for: timePeriod)
-                }
-            }
-            
-            
             if  (period == .Morning && hour < AppConstants.MORNING_NOTIFICATION_HOUR && currentRec.morningDate != nil) ||
                     (period == .Afternoon && hour < AppConstants.AFTERNOON_NOTIFICATION_HOUR && currentRec.eveningDate != nil) ||
                     (period == .Night && hour < AppConstants.NIGHT_NOTIFICATION_HOUR && currentRec.nightDate != nil){
                 cancelSheduledNotification(for: period)
+            }else{
+                scheduleNotification(for: period)
             }
         }
     }
@@ -176,11 +171,15 @@ extension HomeViewModel{
     }
     
     func scheduleNotification(for period:TimePeriod){
-        notificationManager.sheduleNotification(for: period) { identifier in
-            if let id = identifier{
-                UserDefaultsManager.setID(id: id, for: period)
-                UserDefaultsManager.setNotificationTriggeredVal(isSet: true)
-                Log("Scheduled notification for \(period.rawValue)")
+        if let _ = UserDefaultsManager.getID(period: period){
+            Log("Active notification found for \(period.rawValue)")
+        }else{
+            self.notificationManager.sheduleNotification(for: period) { identifier in
+                if let id = identifier{
+                    UserDefaultsManager.setID(id: id, for: period)
+                    UserDefaultsManager.setNotificationTriggeredVal(isSet: true)
+                    Log("Scheduled notification for \(period.rawValue)")
+                }
             }
         }
     }
@@ -190,6 +189,8 @@ extension HomeViewModel{
             Log("Cancelling \(period.rawValue) Notification")
             notificationManager.cancelScheduledNotification(for: id)
             UserDefaultsManager.removeID(period: period)
+        }else{
+            Log("Couldn't find the notification for \(period.rawValue)")
         }
     }
 }
