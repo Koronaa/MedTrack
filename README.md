@@ -28,6 +28,11 @@ Please do a  `pod install` after checking out.
 
 * App wouldn't show the records where the user hasn't taken any medicine (WIP in dev)
 
+## ToDo
+
+* Known Issues
+* Unit Testing
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
