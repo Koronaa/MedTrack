@@ -55,29 +55,39 @@ class HomeViewModel{
     }
     
     
-    func addRecord(for date:Date){
-        let timePedriod = getTimePeriod(for: date)
-        switch timePedriod {
-        case .Morning:
-            currentRecord?.morningDate = date
-        case .Afternoon:
-            currentRecord?.eveningDate = date
-        case .Night:
-            currentRecord?.nightDate = date
+    func addRecord(for date:Date,withSilentMode isEnabled:Bool = false){
+        
+        if !isEnabled{
+            let timePedriod = getTimePeriod(for: date)
+            switch timePedriod {
+            case .Morning:
+                currentRecord?.morningDate = date
+            case .Afternoon:
+                currentRecord?.eveningDate = date
+            case .Night:
+                currentRecord?.nightDate = date
+            }
         }
+        
+        
         
         let tempRecord = currentRecord!
         currentRecord!.score = MedTrackerDTO.calculateScore(for: tempRecord)
         score.onNext(currentRecord!.score)
         
+        
         modelLayer.createOrUpdateRecord(from: currentRecord!).subscribe(onNext: {[weak self] isSuccess in
             if isSuccess{
                 let message = UserMessage(title: "Record Added", message: "Record added successfully!")
                 self?.dataUpdated.onNext(true)
-                self?.successMessage.onNext(message)
+                if !isEnabled{
+                    self?.successMessage.onNext(message)
+                }
             }else{
                 let message = UserMessage(title: "Record Failed", message: "Something went wrong while saving the record")
-                self?.errorMessage.onNext(message)
+                if !isEnabled{
+                    self?.errorMessage.onNext(message)
+                }
             }
         }).disposed(by: bag)
     }
@@ -170,7 +180,7 @@ extension HomeViewModel{
             if let id = identifier{
                 UserDefaultsManager.setID(id: id, for: period)
                 UserDefaultsManager.setNotificationTriggeredVal(isSet: true)
-                print("Scheduled notification for \(period.rawValue)")
+                Log("Scheduled notification for \(period.rawValue)")
             }
         }
     }

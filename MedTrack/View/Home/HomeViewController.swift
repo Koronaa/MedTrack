@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
         setupSubscriptions()
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
         homeVM.getCurrentRecord()
+        homeVM.addRecord(for: Date(), withSilentMode: true)
         getRecentReports()
     }
     
@@ -66,6 +67,7 @@ class HomeViewController: UIViewController {
     
     @objc private func willEnterForeground(){
         homeVM.getCurrentRecord()
+        homeVM.addRecord(for: Date(), withSilentMode: true)
         getRecentReports()
         setupUI()
     }
